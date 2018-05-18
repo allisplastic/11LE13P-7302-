@@ -72,8 +72,8 @@ net.cuda()
 
 # Loss function and optimization method
 cost = nn.CrossEntropyLoss()
-optimizer = optim.SGD(net.parameters(), lr = learning_rate, momentum = momentum)
-
+#optimizer = optim.SGD(net.parameters(), lr = learning_rate, momentum = momentum)
+optimizer = optim.adam(net.parameters(), lr = learning_rate)
 
 x = []
 y_validation = []
